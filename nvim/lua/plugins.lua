@@ -25,5 +25,14 @@ return {
   },
 
   -- add more plugins below this line
+  -- Auto closing Brackets
+
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end,
+  },
 }
 
