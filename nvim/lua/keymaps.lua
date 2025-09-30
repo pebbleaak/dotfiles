@@ -15,3 +15,5 @@ vim.keymap.set("n", "<leader>o", "o<Esc>", { desc = "Add blank line below" })
 -- Insert blank line above (stay in Normal mode)
 --vim.keymap.set("n", "<leader>O", "O<Esc>", { desc = "Add blank line above" })
 
+-- Format current file with Black
+vim.keymap.set("n", "<leader>f", ":!black %<CR>", { noremap = true, silent = true })

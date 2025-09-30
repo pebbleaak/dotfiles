@@ -12,7 +12,16 @@ return {
         cpp = { "clang_format" },
         h =   { "clang_format" },
         hpp = { "clang_format" },
+        python = { "black" },   
       },
+       formatters = {
+      black = {
+        command = "black",
+        args = { "--quiet", "-" }, -- read from stdin
+        stdin = true,
+      },
+    },
+
       format_on_save = { lsp_fallback = true, timeout_ms = 500 },
     },
     keys = {
