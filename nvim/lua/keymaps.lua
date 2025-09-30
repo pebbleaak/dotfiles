@@ -17,3 +17,7 @@ vim.keymap.set("n", "<leader>o", "o<Esc>", { desc = "Add blank line below" })
 
 -- Format current file with Black
 vim.keymap.set("n", "<leader>f", ":!black %<CR>", { noremap = true, silent = true })
+
+
+-- Run current Python file using system python or venv
+vim.keymap.set("n", "<leader>r", ":!python %<CR>", { noremap = true, silent = false })
