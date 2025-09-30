@@ -134,3 +134,4 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 alias gui='nautilus &>/dev/null &'
 alias brave='brave-browser &>/dev/null &'
+alias actp="source .venv/bin/activate"
