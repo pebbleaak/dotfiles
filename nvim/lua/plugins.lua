@@ -50,10 +50,10 @@ return {
     -- Gruvbox Material
   {
     "sainnhe/gruvbox-material",
-    lazy = true,
-   -- priority = 1000,
+    lazy = false,
+    priority = 1000,
     config = function()
-    --  vim.cmd.colorscheme("gruvbox-material")
+      vim.cmd.colorscheme("gruvbox-material")
     end,
   },
 
@@ -67,8 +67,8 @@ return {
   
         {
   "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
+  lazy = true,
+  --priority = 1000,
   config = function()
     require("tokyonight").setup({
       style = "moon", -- "storm", "night", "moon", "day"
