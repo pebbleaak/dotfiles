@@ -43,5 +43,71 @@ return {
       require("nvim-autopairs").setup {}
     end,
   },
-}
 
+
+    -- Themes 
+    --
+    -- Gruvbox Material
+  {
+    "sainnhe/gruvbox-material",
+    lazy = true,
+   -- priority = 1000,
+    config = function()
+    --  vim.cmd.colorscheme("gruvbox-material")
+    end,
+  },
+
+  -- Solarized
+  {
+    "maxmx03/solarized.nvim",
+    lazy = true,
+  },
+
+  -- Tokyo Night
+  
+        {
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require("tokyonight").setup({
+      style = "moon", -- "storm", "night", "moon", "day"
+    })
+    vim.cmd.colorscheme("tokyonight")
+  end,
+},
+
+
+  -- Catppuccin
+  --  latte, frappe, macchiato, mocha
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = true,
+  --  priority = 1000,
+    config = function()
+    require("catppuccin").setup({
+      flavour = "mocha",     })
+ --   Uncomment if you want Catppuccin as default:
+     vim.cmd.colorscheme("catppuccin")
+  end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+  lazy = true,         -- load on startup
+ -- priority = 1000,      -- load before other plugins
+  config = function()
+    require("kanagawa").setup({
+      compile = false,
+      theme = "wave", -- options: "wave", "dragon", "lotus"
+      background = {  -- map to vim.o.background
+        dark = "wave",
+        light = "lotus"
+      },
+    })
+    vim.cmd.colorscheme("kanagawa")
+  end,
+
+}
+}
