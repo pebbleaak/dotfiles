@@ -1,5 +1,7 @@
 -- ~/.config/nvim/lua/settings.lua
 
+-- Terminal
+vim.opt.shell = "/usr/bin/zsh"
 -- General settings
 vim.opt.breakindent = true
 vim.opt.showmode = true
