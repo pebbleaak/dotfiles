@@ -76,9 +76,9 @@ eval "$(zoxide init zsh)"
 # QUALITY OF LIFE ALIASES
 # -----------------------------------------
 alias cat='batcat'
-alias ls='exa --icons --group-directories-first'
-alias ll='exa -l --icons --group-directories-first'
-alias la='exa -la --icons --group-directories-first'
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -l --icons --group-directories-first'
+alias la='eza -la --icons --group-directories-first'
 alias grep='grep --color=auto'
 alias df='df -h'
 alias du='du -h'
