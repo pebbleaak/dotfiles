@@ -47,11 +47,42 @@ vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>',  { desc = 'Hel
 
 
 -- Open terminal in a horizontal split
-vim.keymap.set('n', '<leader>t', ':split term://bash<CR>', { desc = 'Open terminal' })
+--vim.keymap.set('n', '<leader>t', ':split term://bash<CR>', { desc = 'Open terminal' })
 
 -- Or open in a vertical split
-vim.keymap.set('n', '<leader>vt', ':vsplit term://bash<CR>', { desc = 'Vertical terminal' })
+--vim.keymap.set('n', '<leader>vt', ':vsplit term://bash<CR>', { desc = 'Vertical terminal' })
 
 -- Escape terminal mode quickly
 --vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { desc = 'Exit terminal mode' })
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { desc = 'Exit terminal mode', noremap = true, silent = true })
+
+-- Open terminal in a horizontal split using Neovim’s current shell (zsh, etc.)
+vim.keymap.set('n', '<leader>t', function()
+  vim.cmd('split term://' .. vim.o.shell)
+end, { desc = 'Open terminal' })
+
+-- Open terminal in a vertical split using the same shell
+vim.keymap.set('n', '<leader>vt', function()
+  vim.cmd('vsplit term://' .. vim.o.shell)
+end, { desc = 'Vertical terminal' })
+
+
+-- Make Esc leave terminal mode
+vim.api.nvim_create_autocmd('TermOpen', {
+  pattern = '*',
+  callback = function()
+    vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], {
+      noremap = true,
+      silent = true,
+      buffer = true,
+      desc = 'Exit terminal mode',
+    })
+  end,
+})
+
+vim.api.nvim_create_autocmd('TermOpen', {
+  pattern = '*',
+  command = 'startinsert',
+})
+
+
