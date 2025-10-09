@@ -111,6 +111,12 @@ return {
 
 },
 
+
+
+  -- add dracula
+  { "Mofiqul/dracula.nvim" },
+
+
 -- Core LSP
 {
   -- Core LSP
@@ -194,7 +200,7 @@ return {
       },
     }
   end
-}
+},
 --{
 --  'akinsho/toggleterm.nvim',
  -- version = "*",
