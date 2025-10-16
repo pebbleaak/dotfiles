@@ -1,5 +1,4 @@
 {
-  "LazyVim": { "branch": "main", "commit": "a3e52dd346ea35db5521b66e46dca95d32f00cb4" },
   "catppuccin": { "branch": "main", "commit": "c89184526212e04feffbddda9d06b041a8fca416" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "bd5a7d6db125d4654b50eeae9f5217f24bb22fd3" },
