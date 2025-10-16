@@ -135,3 +135,22 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 alias gui='nautilus &>/dev/null &'
 alias brave='brave-browser &>/dev/null &'
 alias actp="source .venv/bin/activate"
+
+
+# >>> NVM Setup >>>
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Always use Node 20 on shell startup
+if command -v nvm >/dev/null 2>&1; then
+  nvm use 20 >/dev/null
+fi
+
+# Ensure npm global binaries for the active Node are in PATH
+export PATH="$(npm config get prefix)/bin:$PATH"
+
+# Optional: show active Node version at login
+echo "Using Node $(node -v)"
+# <<< NVM Setup <<<
+
