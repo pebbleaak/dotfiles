@@ -151,6 +151,6 @@ fi
 export PATH="$(npm config get prefix)/bin:$PATH"
 
 # Optional: show active Node version at login
-echo "Using Node $(node -v)"
+# echo "Using Node $(node -v)"
 # <<< NVM Setup <<<
 
