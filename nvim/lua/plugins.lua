@@ -61,14 +61,18 @@ return {
   {
     "maxmx03/solarized.nvim",
     lazy = true,
+   -- priority = 1000,
+    config = function()
+      vim.cmd.colorscheme("solarized")
+    end,
   },
 
   -- Tokyo Night
   
         {
   "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
+  lazy = true,
+ -- priority = 1000,
   config = function()
     require("tokyonight").setup({
       style = "moon", -- "storm", "night", "moon", "day"
@@ -85,7 +89,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = true,
-  --  priority = 1000,
+   -- priority = 1000,
     config = function()
     require("catppuccin").setup({
       flavour = "mocha",     })
@@ -110,11 +114,27 @@ return {
   end,
 
 },
+{
+  "Mofiqul/dracula.nvim",
+  lazy = true,
+--  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("dracula")
+  end,
+},
+
+{
+  "sonph/onehalf",
+  rtp = "vim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+ vim.cmd([[set runtimepath^=~/.local/share/nvim/lazy/onehalf/vim]])
+    vim.cmd([[colorscheme onehalfdark]])
+  end,
+},
 
 
-
-  -- add dracula
-  { "Mofiqul/dracula.nvim" },
 
 
 -- Core LSP
