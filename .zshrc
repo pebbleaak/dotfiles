@@ -154,3 +154,6 @@ export PATH="$(npm config get prefix)/bin:$PATH"
 # echo "Using Node $(node -v)"
 # <<< NVM Setup <<<
 
+export DJGPP=~/djgpp/djgpp.env
+export PATH="$PATH:~/djgpp/bin"
+
