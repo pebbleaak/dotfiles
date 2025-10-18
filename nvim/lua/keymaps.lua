@@ -92,3 +92,32 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 
+
+
+-- 🗂 TAB MANAGEMENT KEYMAPS
+
+-- Create new tab
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "New Tab" })
+
+-- Open current buffer in new tab
+vim.keymap.set("n", "<leader>to", ":tab split<CR>", { desc = "Open current file in new tab" })
+
+-- Open a specific path in new tab (prompts for input)
+vim.keymap.set("n", "<leader>te", ":tabe ", { desc = "Open path in new tab" })
+
+-- Go to next / previous tab
+vim.keymap.set("n", "<A-Right>", ":tabn<CR>", { desc = "Next Tab" })
+vim.keymap.set("n", "<A-Left>", ":tabp<CR>", { desc = "Previous Tab" })
+
+-- Close current tab
+vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { desc = "Close Tab" })
+
+-- List all open tabs
+vim.keymap.set("n", "<leader>tl", ":tabs<CR>", { desc = "List Tabs" })
+
+-- Move tab left / right
+vim.keymap.set("n", "<leader>th", ":tabmove -1<CR>", { desc = "Move Tab Left" })
+vim.keymap.set("n", "<leader>tl", ":tabmove +1<CR>", { desc = "Move Tab Right" })
+
+-- Set tab-local working directory
+vim.keymap.set("n", "<leader>td", ":tcd %:p:h<CR>", { desc = "Set Tab Directory" })
