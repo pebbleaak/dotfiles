@@ -155,4 +155,4 @@ export PATH="$(npm config get prefix)/bin:$PATH"
 # <<< NVM Setup <<<
 
 
-
+alias dosbox='flatpak run com.dosbox_x.DOSBox-X'
